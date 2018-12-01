@@ -1,6 +1,6 @@
 import Foundation
 
-struct Expression {
+public struct Expression {
     let value: String
 
     public func evaluate() -> String {
