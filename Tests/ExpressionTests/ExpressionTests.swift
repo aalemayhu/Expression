@@ -10,6 +10,10 @@ final class ExpressionTests: XCTestCase {
     func testSimpleAddition() {
         check(input: "2 + 2", expected: "4")
         check(input: "1 + 1", expected: "2")
+        check(input: " 2.75 + .003 + .158", expected: "2.911")
+        check(input: "7.86 * 4.6", expected: "36.156")
+//        check(input: "7.86 × 4.6", expected: "36.156")
+//        check(input: "7 / 20", expected: "0.35")
     }
 
     // TODO: test subtraction
