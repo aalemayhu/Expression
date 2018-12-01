@@ -13,6 +13,7 @@ public struct Expression {
          * [0]: https://github.com/apple/swift-corelibs-foundation/blob/master/Foundation/NSExpression.swift
          */
         let exp = NSExpression(format: value)
+        // TODO: handle rounding issue
         if let result = exp.expressionValue(with: nil, context: nil) {
             return "\(result)"
         }
