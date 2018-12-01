@@ -3,6 +3,10 @@ import Foundation
 public struct Expression {
     let value: String
 
+    public init(value: String) {
+        self.value = value
+    }
+
     public func evaluate() -> String {
         /**
          * XXX: This won't work on Linux. Someone needs to implement NSExpression upstream[0], maybe you can do it?

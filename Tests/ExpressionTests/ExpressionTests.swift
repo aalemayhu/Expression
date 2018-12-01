@@ -1,16 +1,15 @@
-import XCTest
 @testable import Expression
+import XCTest
 
 final class ExpressionTests: XCTestCase {
-
     private func check(input: String, expected: String) {
         let actual = Expression(value: input)
         XCTAssertEqual(expected, actual.evaluate())
     }
 
     func testSimpleAddition() {
-        self.check(input: "2 + 2", expected: "4")
-        self.check(input: "1 + 1", expected: "2")
+        check(input: "2 + 2", expected: "4")
+        check(input: "1 + 1", expected: "2")
     }
 
     // TODO: test subtraction
@@ -21,7 +20,6 @@ final class ExpressionTests: XCTestCase {
     // TODO: test PEMDAS
     // TODO: test exponents
     // TODO: test paranthesis
-
 
     static var allTests = [
         ("testSimpleAddition", testSimpleAddition),
