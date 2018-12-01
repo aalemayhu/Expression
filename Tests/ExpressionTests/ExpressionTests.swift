@@ -30,9 +30,17 @@ final class ExpressionTests: XCTestCase {
         check(input: "2 * 256", expected: "512")
     }
 
-    // TODO: test PEMDAS
-    // TODO: test exponents
-    // TODO: test paranthesis
+    func testPEMDAS() {
+        check(input: "(1 + 2 + 8) ** 2 + (0 * 0) + 100 - 221 + 3", expected: "3")
+    }
+
+    func testExponents() {
+        check(input: "2**10", expected: "1024")
+    }
+
+    func testParanthesis() {
+        check(input: "(2 + 2) ** 8", expected: "65536")
+    }
 
     static var allTests = [
         ("testSimpleAddition", testSimpleAddition),
